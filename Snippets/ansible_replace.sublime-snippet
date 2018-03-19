@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+   - name:
+ # This module will replace all instances of a pattern within a file.
+ - replace:
+     after:                                                                                         # If specified, the line after the replace/remove will start. Can be used in combination with before
+     attributes:                                      #default None                                 # Attributes the file or directory should have. To get supported flags look at the man page for chattr on the target system
+     backup:          #yes/no                         #default no                                   # Create a backup file including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly
+     before:                                                                                        # If specified, the line before the replace/remove will occur. Can be used in combination with after
+     encoding:                                        #default utf-8                                # The character encoding for reading and writing the file.
+     follow:          #yes/no                         #default no                                   # This flag indicates that filesystem links, if they exist, should be followed.
+     group:                                                                                         # Name of the group that should own the file/directory, as would be fed to chown.
+     mode:                                                                                          # Mode the file or directory should be. For those used to /usr/bin/chmod remember that modes are actually octal numbers (like 0644). Leaving off the leading zero will likely have unexpected results
+     others:                                                                                        # All arguments accepted by the file module also work here.
+     owner:                                                                                         # Name of the user that should own the file/directory, as would be fed to chown.
+     path:                              #required                                                   # The file to modify.
+     regexp:                            #required                                                   # The regular expression to look for in the contents of the file. Uses Python regular expressions; see http://docs.python.org/2/library/re.html. Uses MULTILINE mode, which means ^ and (Dollar sign) match the beginning and end of the file, as well as the beginning and end respectively of each line of the file.
+     replace:                                                                                       # The string to replace regexp matches. May contain backreferences that will get expanded with the regexp capture groups if the regexp matches. If not set, matches are removed entirely.
+     selevel:                                        #default s0                                    # Level part of the SELinux file context. This is the MLS/MCS attribute, sometimes known as the range. _default feature works as for seuser
+     serole:                                                                                        # Role part of SELinux file context, _default feature works as for seuser.
+     setype:                                                                                        # Type part of SELinux file context, _default feature works as for seuser.
+     seuser:                                                                                        # User part of SELinux file context. Will default to system policy, if applicable. If set to _default, it will use the user portion of the policy if available.
+     unsafe_writes:   #yes/no                                                                       # Normally this module uses atomic operations to prevent data corruption or inconsistent reads from the target files, sometimes systems are configured or just broken in ways that prevent this   
+     validate:                                       #default None                                  # The validation command to run before copying into place
+]]></content>
+	<tabTrigger>replace</tabTrigger>
+	<scope>source.yaml</scope>
+</snippet>
+

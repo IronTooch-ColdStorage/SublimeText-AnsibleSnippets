@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+---
+- hosts: all
+  become: yes
+  vars_prompt:
+     - name: variable_name
+       prompt: "Variable Prompt"
+       private: no
+  tasks:
+]]></content>
+    <tabTrigger>ansible_base</tabTrigger>
+</snippet>

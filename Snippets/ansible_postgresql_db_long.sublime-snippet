@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+ - name:
+ # Add or remove PostgreSQL databases from a remote host.
+ - postgresql_db:
+     encoding:                                                                                                     # Encoding of the database
+     lc_collate:                                                                                                   # Collation order (LC_COLLATE) to use in the database. Must match collation order of template database unless template0 is used as template
+     lc_ctype:                                                                                                     # Character classification (LC_CTYPE) to use in the database (e.g. lower, upper, ...) Must match LC_CTYPE of template database unless template0 is used as template.
+     login_host:                                                                                                   # Host running the database
+     login_password:                                                                                               # The password used to authenticate with
+     login_unix_socket:                                                                                            # Path to a Unix domain socket for local connections
+     login_user:                                                                               #default postgres   # The username used to authenticate with
+     name:                                                                      #required                          # name of the database to add or remove
+     owner:                                                                                                        # Name of the role to set as owner of the database
+     port:                                                                                     #default 5432       # Database port to connect to.
+     ssl_mode:           #disable/allow/prefer/require/verify-ca/verify-full                   #default prefer     # Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server.
+     ssl_rootcert:                                                                                                 # Specifies the name of a file containing SSL certificate authority (CA) certificate(s).
+     state:              #present/absent/dump/restore                                          #default present    # The database state. present implies that the database should be created if necessary. absent implies that the database should be removed if present. dump requires a target definition to which the database will be backed up. restore also requires a target definition from which the database will be restored
+     target:                                                                                                       # File to back up or restore from. Used when state is "dump" or "restore"
+     target_opts:                                                                                                  # Further arguments for pg_dump or pg_restore. Used when state is "dump" or "restore"
+     template:                                                                                                     # Template used to create the database
+]]></content>
+	<tabTrigger>postgresql_db_long</tabTrigger>
+	<scope>source.yaml</scope>
+</snippet>
