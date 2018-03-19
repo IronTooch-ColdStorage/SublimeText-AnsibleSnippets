@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+ - name:
+   postgresql_db:
+     name:                                                                      #required                          # name of the database to add or remove
+     state:              #present/absent/dump/restore                                          #default present    # The database state. present implies that the database should be created if necessary. absent implies that the database should be removed if present. dump requires a target definition to which the database will be backed up. restore also requires a target definition from which the database will be restored
+]]></content>
+	<tabTrigger>postgresql_db</tabTrigger>
+	<scope>source.yaml</scope>
+</snippet>
