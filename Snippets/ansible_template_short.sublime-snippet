@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+    - name: 
+      template:
+        src: name.j2
+        dest: /tmp/name
+]]></content>
+    <tabTrigger>template_short</tabTrigger>
+    <scope>source.yaml</scope>
+</snippet>

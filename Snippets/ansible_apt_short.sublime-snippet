@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+    - name:
+      apt:
+        name: "{{ item }}"
+        state:                      present
+        update_cache:               yes                                                                              
+      with_items:
+        - 'packagename'
+        - 'packagename'
+]]></content>
+    <tabTrigger>apt_short</tabTrigger>
+    <scope>source.yaml</scope>
+</snippet>

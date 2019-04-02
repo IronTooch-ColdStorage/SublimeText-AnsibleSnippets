@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+    - name:
+      file:
+        path: /work
+        owner: root
+        group: root
+        mode: 01777
+        recurse: yes
+]]></content>
+    <tabTrigger>chown</tabTrigger>
+    <scope>source.yaml</scope>
+</snippet>

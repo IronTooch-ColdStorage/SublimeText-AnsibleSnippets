@@ -1,10 +1,9 @@
 <snippet>
     <content><![CDATA[
-  
- - name: Clone Git Repo REPONAME
- - git:
-     dest:                                             #  '/srv/checkout'
-     repo:                                             # 'https://foosball.example.org/path/to/repo.git'
+- name: Clone Git Repo REPONAME
+  git:
+    dest:                                             #  '/srv/checkout'
+    repo:                                             # 'https://foosball.example.org/path/to/repo.git'
 
 ]]></content>
     <tabTrigger>git</tabTrigger>
