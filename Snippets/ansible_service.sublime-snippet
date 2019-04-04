@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
- - name: Turn on service
- - service:
-     enabled: yes  
-     name:                       #required                                     # Name of the service.
-     state: started
+- name: 
+  service:
+    enabled: yes  
+    name:                      
+    state: started
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>service</tabTrigger>
